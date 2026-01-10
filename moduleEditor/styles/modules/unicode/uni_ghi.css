@@ -1,0 +1,24 @@
+/**ADMIN modules/unicode/uni_ghi.css todo*/
+/** G */
+/** H */
+.hand-raised-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✋";
+	font-size: 1.2em;
+}
+/** todo */
+.hand-victory-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✌";
+	font-size: 1.2em;
+}
+.hand-writing-uc::after{
+	position: absolute;
+	inset: 0;
+	content:"\✍";
+	font-size: 1.2em;
+}
+
+/** I */

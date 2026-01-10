@@ -1,0 +1,40 @@
+/**ADMIN modules/unicode/uni_jkl.css todo*/
+/** J */
+/** K */
+.key-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⚿";
+	font-size: 1.2em;
+}
+.keyboard-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⌨";
+	font-size: 1.2em;
+}
+/** L */
+.list-circle-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"○";
+	font-size: 1.2em;
+}
+.list-disc-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"●";
+	font-size: 1.2em;
+}
+.list-square-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"■";
+	font-size: 1.2em;
+}
+.list-square-open-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"□";
+	font-size: 1.2em;
+}

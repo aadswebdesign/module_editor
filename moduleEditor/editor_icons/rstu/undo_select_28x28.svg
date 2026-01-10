@@ -1,0 +1,42 @@
+<svg id='undo_select_28x28' viewBox='0 0 28 28' height='28' width='28' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid transparent;}
+			.base-style{
+				fill: none;
+				fill-rule:evenodd;
+				stroke:#000000;
+				stroke-width:2px;
+				stroke-linecap:butt;
+				stroke-linejoin:miter;
+				stroke-opacity:1 
+			}
+			.style-1{
+				fill:#00ffff;
+				stroke:#b795a3;
+				stroke-width:0.031116;
+			}
+			.style-2{
+				fill:#000000;
+				stroke:#000000;
+				stroke-width: 0.02px;
+			}
+			.style-3{
+				stroke-width: 0.5px;
+				fill: #000000;
+			}
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h28v28H0z'  stroke='none' fill='none' />
+		<rect class='base-style style-1' x='2' y='2' width='24' height='24' rx='0.5'/>
+		<g transform='translate(-0.8,-0.3) scale(1.2)'>
+			<path class='base-style' d='m  6,12 h 4' />
+			<path class='base-style' d='M 5,4.4715647 A 3.0284353,2.8231633 0 0 1 8.0284353,7.294728 v 9.410544 A 3.0284353,2.8231633 0 0 1 5,19.528435' />
+			<path class='base-style' d='M 11,4.4715647 A 3.0284353,2.8231633 0 0 0 7.9715647,7.294728 v 9.410544 A 3.0284353,2.8231633 0 0 0 11,19.528435' />
+			<path class='base-style' d='m 12.000405,8.9653023 3.043463,-0.00128 c 2.652608,0.054283 3.438833,1.3346957 3.491052,3.0973147 -0.121285,1.849501 -0.925571,3.176377 -3.491052,3.088531 l -1.678013,-0.006' />
+			<path class='base-style style-2' d='m 12.015948,15.153019 2.770132,-2.232119 4e-6,4.459774 z' />
+		</g>
+	</g>
+</svg>

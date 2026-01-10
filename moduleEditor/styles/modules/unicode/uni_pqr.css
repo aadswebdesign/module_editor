@@ -1,0 +1,100 @@
+/**ADMIN modules/unicode/uni_pqr.css todo*/
+/** P */
+.pencil-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✏";
+	font-size: 1.2em;
+}
+.pencil-lower-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✎";
+	font-size: 1.2em;
+}
+
+.pointing-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"☞";
+	font-size: 1.2em;
+}
+.pointing-right-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"☛";
+	font-size: 1.2em;
+}
+.pointing-left-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"☜";
+	font-size: 1.2em;
+}
+
+.pointing-left-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"☚";
+	font-size: 1.2em;
+}
+
+
+/** Q */
+.quarter-one-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"¼";
+	font-size: 1.2em;
+}
+.quarter-two-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"½";
+	font-size: 1.2em;
+}
+.quarter-three-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"¾";
+	font-size: 1.2em;
+}
+.question-mark-inverted-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"¿";
+	font-size: 1.2em;
+}
+.quoted-double-uc::before{
+	content:"“";
+	font-size: 1.2em;
+	padding-right: 0.01em;
+}
+.quoted-double-uc::after{
+	content:"„";
+	height: 1.2em;
+	padding-left: 0.1em;
+}
+.quoted-single-uc::before{
+	content:"‘";
+	font-size: 1.2em;
+	padding-right: 0.01em;
+}
+.quoted-single-uc::after{
+	content:"‚";
+	font-size: 1.2em;
+	padding-left: 0.1em;
+}
+/** R */
+.rectangle-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▭";
+	font-size: 1.2em;
+}
+.rectangle-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▬";
+	font-size: 1.2em;
+}

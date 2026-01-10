@@ -1,0 +1,193 @@
+/**ADMIN modules/unicode/uni_abc.css todo*/
+/** A */
+.alarm-clock-uc::before{
+	position: absolute;
+	inset: 0;
+	content: "⏰";
+	font-size: 1.2em;
+}
+
+.arrow-two-way-x-uc::before{
+	position: absolute;
+	inset: 0;
+	content: "↔";
+	font-size: 1.2em;
+}
+
+.arrow-two-way-y-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"↕";
+	font-size: 1.2em;
+}
+.arrow-down-to-up-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"↑";
+	font-size: 1.2em;
+}
+
+.arrow-left-to-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"→";
+	font-size: 1.2em;
+}
+
+.arrow-right-to-left-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"←";
+	font-size: 1.2em;
+}
+
+.arrow-up-to-down-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"↓";
+	font-size: 1.2em;
+}
+
+.asterix-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"*";
+	font-size: 1.2em;
+}
+/** B */
+.bar-horizontal-x2-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"‥";
+	font-size: 1.2em;
+}
+.bar-horizontal-x3-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"…";
+	font-size: 1.2em;
+}
+/** C */
+.caret-down-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▼";	
+	font-size: 1.2em;
+}
+.caret-down-small-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▾";	
+	line-height: 1.1em;	
+	font-size: 1.2em;
+}
+
+.caret-left-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"◀";
+	font-size: 1.2em;
+}
+
+.caret-left-small-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"◂";
+	font-size: 1.2em;
+}
+.caret-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▶";
+	font-size: 1.2em;
+}
+.caret-right-small-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▸";
+	font-size: 1.2em;
+}
+.caret-up-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▲";	
+	font-size: 1.2em;
+}
+.caret-up-small-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▴";
+	line-height: 1.1em;	
+	font-size: 1.2em;
+}
+
+.caret-up-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"◥";
+	font-size: 1.2em;
+}
+
+.caret-down-left-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"◣";
+	font-size: 1.2em;
+}
+
+.check-mark-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✓";
+	font-size: 1.2em;
+}
+.check-mark-green-bg-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✅";
+	font-size: 1.2em;
+}
+.check-mark-heavy-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✔";
+	font-size: 1.2em;
+}
+.circle-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"○";
+	font-size: 1.2em;
+}
+.circle-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"●";
+	font-size: 1.2em;
+}
+
+.copyright-uc::after{
+	position: absolute;
+	inset: 0;
+	content:"©";
+	font-size: 1.2em;
+}
+
+.cross-mark-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"❌";
+	font-size: 1.2em;
+}
+.cross-mark-green-bg-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"❎";
+	font-size: 1.2em;
+}
+.cross-mark-bg-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⛝";
+	font-size: 1.2em;
+}

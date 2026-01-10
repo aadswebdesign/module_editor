@@ -1,0 +1,161 @@
+/**ADMIN modules/unicode/uni_stu.css todo*/
+/** S */
+.saltire-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"🞪";
+	font-size: 1.2em;
+}
+.saltire-heavy-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"🞬";
+	font-size: 1.2em;
+}
+
+.scissors-white-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✄";
+	font-size: 1.2em;
+}
+.scissors-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✂";
+	font-size: 1.2em;
+}
+.scissors-solid-safety-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✀";
+	font-size: 1.2em;
+}
+.scissors-half-down-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✁";
+	font-size: 1.2em;
+}
+.scissors-half-up-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✃";
+	font-size: 1.2em;
+}
+.smiley-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"☺";
+	font-size: 1.2em;
+}
+
+.smiley-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"☻";
+	font-size: 1.2em;
+}
+.square-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"□";
+	font-size: 1.2em;
+}
+.square-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"■";
+	font-size: 1.2em;
+}
+.squared-dot-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⊡";
+	font-size: 1.2em;
+}
+.squared-times-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⊠";
+	font-size: 1.2em;
+}
+
+.star-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"☆";
+	font-size: 1.2em;
+}
+.star-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"★";
+	font-size: 1.2em;
+}
+.stopwatch-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⏱";
+	font-size: 1.2em;
+}
+.star-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"★";
+	font-size: 1.2em;
+}
+
+/** T */
+.tel-uc::before{
+	position: absolute;
+	inset: 0;
+	content:'℡';
+	font-size: 1.2em;
+}
+.tel-location-uc::before{
+	position: absolute;
+	inset: 0;
+	content:'✆';
+	font-size: 1.2em;
+}
+
+.timer-clock-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⏲";
+	font-size: 1.2em;
+}
+
+.triangle-up-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⏶";
+	font-size: 1.2em;
+}
+.triangle-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⏵";
+	font-size: 1.2em;
+}
+.triangle-down-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⏷";
+	font-size: 1.2em;
+}
+.triangle-left-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⏴";
+	font-size: 1.2em;
+}
+
+/** U */
+.undo-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⎌";
+	font-size: 1.2em;	
+}

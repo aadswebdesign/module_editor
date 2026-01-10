@@ -1,0 +1,30 @@
+/** moduleEditor/styles/modules/unicode/uni_def.css todo*/
+
+/** D */
+.degree::before{
+	position: absolute;
+	inset: 0;
+	content:"°";
+	font-size: 1.2em;
+}
+.division::before{
+	position: absolute;
+	inset: 0;
+	content:"÷";
+	font-size: 1.2em;
+}
+/** E */
+.euro::before{
+	position: absolute;
+	inset: 0;
+	content:"€";
+	font-size: 1.2em;
+}
+
+.exclamation-inverted::before{
+	position: absolute;
+	inset: 0;
+	content:"¡";
+	font-size: 1.2em;
+}
+/** F */

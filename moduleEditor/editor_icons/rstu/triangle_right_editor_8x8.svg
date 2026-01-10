@@ -1,0 +1,18 @@
+<svg id='triangle_right_editor_8x8' viewBox='0 0 8 8' height='8' width='8' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 0.1px solid transparent;}
+			.base-style{				
+				fill: #1c3f3c;
+				fill-rule:evenodd;
+				stroke:f2eaea;
+				stroke-width:0.2px;
+				stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 
+			}
+		</style>
+	</defs>
+	<g>
+		<path d='M 0,0 H 8 V 8 H 0 Z' stroke='none' fill='none' />
+		<path class='base-style' d='M 8,4.0007813 0,0 0.00173778,8 Z' />
+	</g>
+</svg>

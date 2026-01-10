@@ -1,0 +1,19 @@
+<svg id='triangle_down_editor_12x12' viewBox='0 0 12 12' height='12' width='12' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 0.1px solid transparent;}
+			.base-style{				
+				fill: #1c3f3c;
+				fill-rule:evenodd;
+				stroke:f2eaea;
+				stroke-width:0.2px;
+				stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 
+			}
+
+		</style>
+	</defs>
+	<g>
+		<path d='M 0,0 H 12 V 12 H 0 Z' stroke='none' fill='none' />
+		<path class='base-style' d='M 0,0.0052106 12,0 5.9953125,12 Z' />
+	</g>
+</svg>

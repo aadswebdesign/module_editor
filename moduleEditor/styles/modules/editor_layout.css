@@ -1,0 +1,177 @@
+/** /managers/moduleEditor/styles/modules/editor_layout.css*/
+*{
+	margin: 0;
+	padding: 0;
+}
+/** editor-ctn[class]*/
+editor-ctn[class]{
+	left: 0.5%;
+	width: 99%;
+	flex-flow: column nowrap;
+	padding: 0.25em 0.25em;
+	font-size: 1.0em;
+	background:var(--grey-3-color);
+	gap: 0.25em;
+}
+
+editor-ctn[class] toolbars-ctn[class]{
+	flex-flow: row wrap;
+	gap: 0.2em 0.25em;
+	margin-bottom: 0.25em;
+}
+
+toolbars-ctn[class] editor-toolbar[class]{
+	padding: 0 0.05em;
+}
+
+/** editor-ctn items-wrapper[class] */
+editor-ctn[class] items-wrapper[class]{
+	flex-flow: row nowrap;
+	gap: 0.2em;
+}
+
+items-wrapper[class] items-ctn{
+	flex-flow: row nowrap;
+	gap: 0.2em;
+}
+
+items-ctn.tb-btns{
+	max-width: 160px;
+}
+
+items-ctn.tb-btns.max-width{
+	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-width: thin;
+	scrollbar-color: var(--grey-8-color) transparent;
+	padding: 3px;
+}
+/** editor-ctn  btn-block[class]*/
+editor-ctn[class] btn-block[class] .tb-style{
+	background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+	border: 0.05rem solid #8bb1d8;
+	border-radius: 0.25em;
+	color: #e8e5e5;
+} 
+btn-block .tb-item{
+	height: 2.1em;
+	width: 2.1em;
+	display:block;
+	opacity: 1;
+	cursor: pointer;
+}
+
+btn-block[class] .tb-item::before{
+	height: 1.9em;
+	width: 1.9em;
+	transform: translate(0.1em,0.1em);
+	top: -0.2em;
+	left:-0.2em;
+}
+
+btn-block[class][data-on] .tb-item{
+	opacity: 0.4;
+}
+
+/** editor-ctn  items-wrapper*/
+editor-ctn[class] items-wrapper.toolbar-inner items-button{
+	cursor: pointer;
+	width: 0.8em;
+	height: 1.8em;
+	border-left: 0.2em solid #9b9fa5;
+}
+editor-ctn[class] items-wrapper.toolbar-inner items-button::before{
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	font-size: 0.6em;
+	line-height: 2.9em;
+}
+/** editor-ctn[class] items-wrapper.articles-headings.*/
+editor-ctn[class] items-wrapper[class]{}
+items-wrapper.block-group.articles-headings items-button{
+	height: 1.68em;
+	width: 1.68em;
+	background: rgb(48, 52, 51);
+	color: rgb(200, 222, 235);
+	border: 0.05em solid #8bb1d8;
+	border-radius: 0.25em;
+}
+
+items-wrapper.block-group.articles-headings items-button.pseudo::before{
+	top: -0.2em;
+	height: calc(100% - 0.2em);
+	right: auto;
+	left: auto;
+	width: calc(100% - 0.2em);
+}
+
+/**items-wrapper.block-group.headings[class] */
+items-wrapper.block-group.headings{
+	gap: 0.05em;
+	width: fit-content;
+	height: 1.8em;
+}
+
+items-wrapper.block-group.headings items-ruler[class]{
+	height: inherit;
+	width: 1.1em;
+	text-align: center;
+	line-height: 0.9em;
+	font-size: 0.68em;
+	background: rgb(48, 52, 51);
+	border-radius: 0 0.25em 0.25em 0;
+	color: rgb(200, 222, 235);
+	border: 0.05em solid #8bb1d8;
+}
+items-wrapper.block-group.headings items-ruler[class]::before{
+	font-size: 1.4em;
+	font-weight: 600;
+	line-height: 2.0em;
+}
+items-wrapper.block-group.headings items-ctn[class]{
+	flex-flow: row wrap;
+	height: 1.75em;
+	width: 1.75em;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	scroll-snap-type: y mandatory;
+}
+
+items-wrapper.block-group.headings items-ctn[class] btn-block[class]{
+   scroll-snap-align: center;
+}
+
+/** editor-ctn[class]  editor-block[class] */
+editor-ctn[class] editor-block[class]{
+	flex-flow: column nowrap;
+}
+
+editor-block[class] editor-canvas{
+	width: 100%;
+	height: 125px;
+	white-space: pre-wrap;
+	background: #fff;
+	color: #000;
+	border: 1px solid #ccc;
+	padding: 0.05em;
+	overflow-Y: auto;
+}
+
+editor-block[class] pre-ctn[class]{
+	flex-flow: column nowrap;
+}
+
+pre-ctn[class] pre{
+	width: 100%;
+	padding: 0.05em;
+	height: 125px;
+	background: #e8e5e5;
+	overflow-Y: auto;
+} 
+
+editor-block[class] hidden-ctn[class]{
+	visibility: hidden;
+}
+/** hidden-ctn[class] textarea{} */

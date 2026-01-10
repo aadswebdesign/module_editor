@@ -1,0 +1,60 @@
+/** /moduleEditor/styles/modules/editor_classes.css*/
+
+*{
+    --btn-bg: #4e4e4e;
+    --btn-cl: #fffadd;
+	--ctrls-bg: rgb(40,40,40);
+	--ctrls-sub-bg: rgb(141,141,141);
+	--ctrls-color: #f4debd;
+	--ctrls-color-active:rgb(250,240,226);
+	--before-color-one:#f0f0f0;
+	--checkbox-border-color: #8b8c89;
+	--checkbox-checked-color: #274c77;
+	--checkbox-hover-color: #a3cef1;
+	--checkbox-disabled-bg-color: #d9d9d9;	
+	--grey-1-color: #f2f2f2;
+	--grey-2-color: #f3f3f3;
+	--grey-3-color: #f8f8f8;
+	--grey-4-color: #dddddd;
+	--grey-5-color: #d2d2d2;
+	--grey-6-color: #c8c8c8;
+	--grey-7-color: #bebebe;
+	--grey-8-color: #b4b4b4;
+	--grey-9-color: #a2a2a2;
+	--grey-10-color: #ababab;
+}
+
+
+.absolute{
+	position:absolute;
+}
+.relative{
+	position: relative;
+}			
+.fixed{
+	position: fixed;
+}			
+.sticky{
+	position: sticky;
+}
+.absolute,
+.relative,
+.fixed,
+.sticky{
+	inset: 0;
+}
+.display-block{
+	display: block;
+}
+.display-inline-flex{
+	display: inline-flex;
+}	
+.display-flex{
+	display: flex;
+}	
+.display-grid{
+	display: grid;
+}
+.display-none{
+	display: none;
+}

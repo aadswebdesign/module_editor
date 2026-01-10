@@ -1,0 +1,52 @@
+<svg id='hr_28x28' viewBox='0 0 28 28' height='28' width='28' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<filter id="shadow_1">
+			<feDropShadow stdDeviation="0.2" dy="0.4" dx="0.2"/>
+		</filter>
+		<style>
+			*{ border: 1px solid transparent;}
+			.base-style{
+				fill: none;
+				fill-rule:evenodd;
+				stroke:#000000;
+				stroke-width:2px;
+				stroke-linecap:butt;
+				stroke-linejoin:miter;
+				stroke-opacity:1; 
+			}
+			.style-1{
+				fill:#f3f4f9;
+				stroke:#b795a3;
+				stroke-width:0.05px;
+			}
+			.style-2{
+				stroke-width: 0.7px;
+				stroke:#6d604c;
+			}
+			.style-3{
+				stroke:#342610;
+				stroke-width:4.5px;
+			}
+			.style-4{
+				fill:none;
+				stroke:#342610;
+				stroke-width:0.5px;
+			}
+			.text-style{
+				letter-spacing: 0.8px;
+				font-size:14.5px;
+				font-family:Tahoma;
+				fill:#fa6e64;
+				stroke: #020824;
+				stroke-width:0.45px;
+				filter:url(#shadow_1);
+			}
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h28v28H0z'  stroke='none' fill='none' />
+		<rect class='base-style style-1' x='2' y='2' width='24' height='24' rx='0.5'/>
+		<line class='base-style style-3' x1='2' y1='22' x2='26' y2='22' />
+		<text class='text-style' x='3.5' y='15.2'>HR</text>
+	</g>
+</svg>

@@ -1,0 +1,83 @@
+<svg id='article_header_28x28' viewBox='0 0 28 28' height='28' width='28' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<filter id="shadow_1">
+			<feDropShadow stdDeviation="0.2" dy="0.4" dx="0.2"/>
+		</filter>
+		<style>
+			*{ border: 1px solid transparent;}
+			.base-style{
+				fill: none;
+				fill-rule:evenodd;
+				stroke:#000000;
+				stroke-width:2px;
+				stroke-linecap:butt;
+				stroke-linejoin:miter;
+				stroke-opacity:1; 
+			}
+			.style-1{
+				fill:#f3f4f9;
+				stroke:#b795a3;
+				stroke-width:0.05px;
+			}
+			.style-2{
+				stroke-width: 0.7px;
+				stroke:#6d604c;
+			}
+			.style-3{
+				fill:#483e37;
+				stroke:#342610;
+				stroke-width:0.02
+			}
+			.style-4{
+				fill:none;
+				stroke:#342610;
+				stroke-width:0.5px;
+			}
+			.text-style{
+				letter-spacing: 0.8px;
+				font-size:18.5px;
+				font-family:Tahoma;
+				fill:#fa6e64;
+				stroke: #020824;
+				stroke-width:0.45px;
+				filter:url(#shadow_1);
+			}
+			.text-style2{
+				fill:#798aea;
+				font-size:11.5px;
+			}
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h28v28H0z'  stroke='none' fill='none' />
+		<rect class='base-style style-1' x='2' y='2' width='24' height='24' rx='0.5'/>
+		<g transform='translate(6.5,-0.6) scale(1.2)'>
+			<path  class='base-style style-3'  d='m 10.018063,18.010846 1.005428,-2.010951 2.942683,-2.985672 1.045695,1.055528 -2.994546,2.937459 z' />
+		</g><!-- pencil -->		
+		<line class='base-style style-2' x1='2' y1='5' x2='7.5' y2='5' />
+		<line class='base-style style-2' x1='13' y1='5' x2='16' y2='5' />
+		<line class='base-style style-2' x1='19.5' y1='5' x2='21.5' y2='5' />
+		<line class='base-style style-2' x1='24.5' y1='5' x2='26' y2='5' />
+		<line class='base-style style-2' x1='2' y1='8' x2='6.5' y2='8' />
+		<line class='base-style style-2' x1='14' y1='8' x2='16' y2='8' />
+		<line class='base-style style-2' x1='24.5' y1='8' x2='26' y2='8' />
+		<line class='base-style style-2' x1='2' y1='11' x2='5.5' y2='11' />
+		<line class='base-style style-2' x1='15' y1='11' x2='16' y2='11' />
+		<line class='base-style style-2' x1='19.5' y1='11' x2='21.5' y2='11' />
+		<line class='base-style style-2' x1='24.5' y1='11' x2='26' y2='11' />
+ 		<line class='base-style style-2' x1='2' y1='14' x2='4.5' y2='14' />
+		<line class='base-style style-2' x1='16' y1='14' x2='26' y2='14' />
+ 		<line class='base-style style-2' x1='2' y1='17' x2='3.5' y2='17' />
+ 		<line class='base-style style-2' x1='8' y1='17' x2='12.5' y2='17' />
+ 		<line class='base-style style-2' x1='17' y1='17' x2='19.8' y2='17' />
+		<line class='base-style style-2' x1='24.5' y1='17' x2='26' y2='17' />
+ 		<line class='base-style style-2' x1='2' y1='20' x2='18' y2='20' />
+		<line class='base-style style-2' x1='22' y1='20' x2='26' y2='20' />
+		<g transform='translate(0,0.6)'>
+			<path class='base-style style-4' d='m 2.0167764,22.228329 c 1.1072741,-0.03287 1.9357489,0.13338 2.3792164,-0.478413 0.7584909,-0.649832 1.559274,-0.639312 2.4032347,3.71e-4 0.7958771,0.63588 1.5953337,0.655664 2.3985433,3.71e-4 0.7902554,-0.606701 1.5948032,-0.687234 2.4079252,3.72e-4 0.770249,0.689567 1.574211,0.634111 2.40793,3.71e-4 0.788907,-0.602308 1.59145,-0.682915 2.403236,3.72e-4 0.75448,0.632313 1.557607,0.620856 2.407926,3.72e-4 0.804376,-0.631456 1.601986,-0.635659 2.393848,3.71e-4 0.809109,0.597508 1.609303,0.651396 2.398541,3.75e-4 0.684048,-0.518788 0.411232,-0.526795 2.382303,-0.483729' />
+			<line class='base-style style-2' x1='2' y1='23.2' x2='26' y2='23.2' />
+		</g>
+		<text class='text-style' x='4.6' y='18'>A</text>
+		<text class='text-style text-style2' x='16.5' y='12.8'>H</text>
+	</g>
+</svg>
