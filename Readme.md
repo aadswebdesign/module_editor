@@ -1,8 +1,5 @@
 ## Module Editor ins and outs!  
 
->	### Disclaimer:
->>  I DON'T TAKE ANY RESPONSABILITY FOR ANY DAMAGE THIS PIECE OF SOFTWARE MIGHT CREATE! USING IT IS ALLWAYS AT YOUR OWN RISC!
-
 >	### Introduction:
 >>	- An editor that follows the natural flow of the _HTML_ elements.
 >>	- An editor that is _Modular_ and based on the _contenteditable_ attribute.
@@ -34,15 +31,7 @@
 >>>			2. ☛ After that, it is allways the last- ElementChild/Child, here you use _appendChild_ for the _inline elems_ and _replaceWith_ for the _block elems_.		    
 >>>			3. ☛ This becomes the start range for the next element / node.			    
 >>>				- That's why using the Range Api makes no sense here!		    
->>>					- last- ElementChild/Child is the range and will updated every time content is added!			    
->>>			    
-
-
-
-
->>>			    
-
-
+>>>					- last- ElementChild/Child is the range and will be updated every time content is added!			    
 
 >	>	#### The editor:
 >>>	What I have created?
@@ -216,7 +205,7 @@
                         toolbars_top: {			
                           tbs_ctn_top_cb: LEE.toolbarsCtnElem,
                           tbs_ctn_id:'toolbars_ctn_top',
-                          tbs_ctn_classes:['relative','display-flex'],
+                          tbs_ctn_classes:['top','relative','display-flex'],
                           //max 6 toolbars top
                           editor_toolbars_top:{
                             edt_toolbar_1:{
@@ -330,7 +319,7 @@
                     toolbars_bottom:{			
                       tbs_ctn_btm_cb: LEE.toolbarsCtnElem,
                       tbs_ctn_id:'toolbars_ctn_bottom',
-                      tbs_ctn_classes:['relative','display-flex'],
+                      tbs_ctn_classes:['bottom','relative','display-flex'],
                       //max 6 toolbars bottom
                       editor_toolbars_bottom:{
                         edt_toolbar_1:{

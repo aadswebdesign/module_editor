@@ -19,6 +19,9 @@ editor-ctn[class] toolbars-ctn[class]{
 	gap: 0.2em 0.25em;
 	margin-bottom: 0.25em;
 }
+editor-ctn[class] toolbars-ctn.top{
+	margin-bottom: 3.5em;
+}
 
 toolbars-ctn[class] editor-toolbar[class]{
 	padding: 0 0.05em;
