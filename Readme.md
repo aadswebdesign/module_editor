@@ -1,37 +1,38 @@
 ## Module Editor ins and outs!  
 
->	### Introduction:
->>	- An editor that follows the natural flow of the _HTML_ elements.
->>	- An editor that is _Modular_ and based on the _contenteditable_ attribute.
+### &nbsp;&nbsp;&nbsp;&nbsp; Introduction:
+- An editor that follows the natural flow of the _HTML_ elements.
+- An editor that is _Modular_ and based on the _contenteditable_ attribute.
 
->	### About:
->	>	#### History:
->>>	To keep it short, previously I have done some other attempts to create an editor and I got them working too.\
->>>	To speak true, I wasn't happy with any of them because:
->>>	- They were hacky, not stable and not fun to work with, because:	
->>>		- They were inspired on some examples that I found around the web.
->>>		- Those examples were based on the _Range Api_ and with the knowledge I have now', that's why I didn't get them right, because the _Range Api_ is not for that!
->>>		- An explanation will follow!
+### &nbsp;&nbsp;&nbsp;&nbsp; About:
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; History:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To keep it short, previously I have done some other attempts to create an editor and I got them working too.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To speak true, I wasn't happy with any of them because:
+
+>	- They were hacky, not stable and not fun to work with, because:	
+>		- They were inspired on some examples that I found around the web.
+>		- Those examples were based on the _Range Api_ and with the knowledge I have now', that's why I didn't get them right, because the _Range Api_ is not for that!
+>		- An explanation will follow!
 	
->	>	#### My Latest Attempt:
->>>	Here I started to look for an other way to create a javascript editor.\
->>>	I began with reading more about the HTML elements in general!
->>>	- What I learned is this, there are two main types.
->>>		- __*1. Block elements__ (divided into two sub groups):
->>>			- ☛ structural block elements, like the &lt;article&gt; element.
->>>			- ☛ text-format elements, like the &lt;p&gt; element.
->>>		- __*2. Inline elements__
->>>			- ☛ like the &lt;b&gt; element.
->>>		-	For creating an editor, they need a different approach.
->>>				- ☛ __*1__ has to be followed by a &lt;br&gt; elem, to insert a block element at a new line.
->>>				- ☛ __*2__ has to be followed by a 'textnode' to insert a new inline element.
->>>		- The contenteditable field!
->>>			1. ☛ Initiating a contenteditable field, begins allways with using _appendChild_.
->>>				-  This creates the first- and last- ElementChild/Child and they have an equal value.
->>>			2. ☛ After that, it is allways the last- ElementChild/Child, here you use _appendChild_ for the _inline elems_ and _replaceWith_ for the _block elems_.		    
->>>			3. ☛ This becomes the start range for the next element / node.			    
->>>				- That's why using the Range Api makes no sense here!		    
->>>					- last- ElementChild/Child is the range and will be updated every time content is added!			    
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My Latest Attempt:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Here I started to look for an other way to create a javascript editor.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I began with reading more about the HTML elements in general!
+>	- What I learned is this, there are two main types.
+>		- __*1. Block elements__ (divided into two sub groups):
+>			- ☛ structural block elements, like the &lt;article&gt; element.
+>			- ☛ text-format elements, like the &lt;p&gt; element.
+>		- __*2. Inline elements__
+>			- ☛ like the &lt;b&gt; element.
+>		-	For creating an editor, they need a different approach.
+>				- ☛ __*1__ has to be followed by a &lt;br&gt; elem, to insert a block element at a new line.
+>				- ☛ __*2__ has to be followed by a 'textnode' to insert a new inline element.
+>		- The contenteditable field!
+>			1. ☛ Initiating a contenteditable field, begins allways with using _appendChild_.
+>				-  This creates the first- and last- ElementChild/Child and they have an equal value.
+>			2. ☛ After that, it is allways the last- ElementChild/Child, here you use _appendChild_ for the _inline elems_ and _replaceWith_ for the _block elems_.		    
+>			3. ☛ This becomes the start range for the next element / node.			    
+>				- That's why using the Range Api makes no sense here!		    
+>					- last- ElementChild/Child is the range and will updated every time content is added!			    
 
 >	>	#### The editor:
 >>>	What I have created?
@@ -205,7 +206,7 @@
                         toolbars_top: {			
                           tbs_ctn_top_cb: LEE.toolbarsCtnElem,
                           tbs_ctn_id:'toolbars_ctn_top',
-                          tbs_ctn_classes:['top','relative','display-flex'],
+                          tbs_ctn_classes:['relative','display-flex'],
                           //max 6 toolbars top
                           editor_toolbars_top:{
                             edt_toolbar_1:{
@@ -319,7 +320,7 @@
                     toolbars_bottom:{			
                       tbs_ctn_btm_cb: LEE.toolbarsCtnElem,
                       tbs_ctn_id:'toolbars_ctn_bottom',
-                      tbs_ctn_classes:['bottom','relative','display-flex'],
+                      tbs_ctn_classes:['relative','display-flex'],
                       //max 6 toolbars bottom
                       editor_toolbars_bottom:{
                         edt_toolbar_1:{
