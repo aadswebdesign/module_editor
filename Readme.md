@@ -1,8 +1,8 @@
 ## Module Editor ins and outs!  
 
 ### &nbsp;&nbsp;&nbsp;&nbsp; Introduction:
-- An editor that follows the natural flow of the _HTML_ elements.
-- An editor that is _Modular_ and based on the _contenteditable_ attribute.
+>	- An editor that follows the natural flow of the _HTML_ elements.
+>	- An editor that is _Modular_ and based on the _contenteditable_ attribute.
 
 ### &nbsp;&nbsp;&nbsp;&nbsp; About:
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; History:
@@ -34,103 +34,102 @@
 >				- That's why using the Range Api makes no sense here!		    
 >					- last- ElementChild/Child is the range and will updated every time content is added!			    
 
->	>	#### The editor:
->>>	What I have created?
->>>	-  A stable, fast and fun to work with editor but for now and as stated before, with a limited set of features.
->>>	-  Modular, just use what you need!
->>>	-  Customizable: creating your own look, icons etc.
->>> -  As it's ___js class based___, each editor you invoke is a new substance and that means that you can have multiple editors within a single form.
->>>	-  ☛ **Note:** the webcomponents, _data attributes_ and some _css classes_ that I use are mandatory as my built rely on it!
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The editor:
+>>	What I have created?
+>>	-  A stable, fast and fun to work with editor but for now and as stated before, with a limited set of features.
+>>	-  Modular, just use what you need!
+>>	-  Customizable: creating your own look, icons etc.
+>> -  As it's ___js class based___, each editor you invoke is a new substance and that means that you can have multiple editors within a single form.
+>>	-  ☛ **Note:** the webcomponents, _data attributes_ and some _css classes_ that I use are mandatory as my built rely on it!
 
->	### Notes:
->	>	#### _Modules_:
->>>	- I work with _js modules_ and all I explain here, is based on that! 
->>>		- _If you want to do it differently? How to do that is completely up to you!_
-
->	>	#### _Namespaces_:
->>>	- When I have to import multiple functions from a single js file, I use _import * as Namespace from './path/to/-.js'_ 
+### &nbsp;&nbsp;&nbsp;&nbsp; Notes:
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Modules_:
+>>	- I work with _js modules_ and all I explain here, is based on that! 
+>>		- _If you want to do it differently? How to do that is completely up to you!_
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Namespaces_:
+>>	- When I have to import multiple functions from a single js file, I use _import * as Namespace from './path/to/-.js'_ 
 >>>		-  Here I use the abbreviation from that js file as a namespace.
->	>	#### _Functions_, _Callbacks_ and _Objects_
->>>	- When I use for example **LEE.editorBlockElem**, I want a function to be passed.  
->>>		- _this function will be processed elsewhere_!	  
->>>			- _Mostly, those function are processed when an event occurs and then it is called a **callback**_. 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Functions_, _Callbacks_ and _Objects_:
+>>	- When I use for example **LEE.editorBlockElem**, I want a function to be passed.  
+>>		- _this function will be processed elsewhere_!	  
+>>			- _Mostly, those function are processed when an event occurs and then it is called a **callback**_. 
 >>>	- When I use for example **BBE.hrBlock()**, I want an object to be passed.  
 >>>		- _This function has been processed already_! 
->	>	#### About my _createObjects()_ function.
->>>	- This function is using the _new Map();_ method and returns _get();_. 
->>>		- I'm not using _set();_ here because as I have many entrees, using a single objects block is more maintainable! 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; About my _createObjects()_ function:
+>>	- This function is using the _new Map();_ method and returns _get();_. 
+>>		- I'm not using _set();_ here because as I have many entrees, using a single objects block is more maintainable! 
 
->	### Documentation:
+### &nbsp;&nbsp;&nbsp;&nbsp; Documentation:
 
->	>	#### Features:
->>>	_As stated previously, it's a limited selection and aim is to add more features overtime!_  
->>>	- Each block takes an argument for changing the icon, those are implemented in a _::before_ pseudo element.  
->>>	- All features are optional, just use what you need! 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Features:
+>>	_As stated previously, it's a limited selection and aim is to add more features overtime!_  
+>>	- Each block takes an argument for changing the icon, those are implemented in a _::before_ pseudo element.  
+>>	- All features are optional, just use what you need! 
 
->>>	- **Block elements:** 
->>>		01. await BBE.h1BlockSingle() 
->>>		02. await BBE.h2BlockSingle() 
->>>		03. await BBE.h3BlockSingle() 
->>>		04. await BBE.h4BlockSingle() 
->>>		05. await BBE.h5BlockSingle() 
->>>		06. await BBE.h6BlockSingle() 
->>>		07. await BBE.hrBlock()
->>>		08. await BBE.paragraphBlock()
->>>		09. await BBG.headingsGroup()
->>>			- _Is a scrollable group of **&lt;h*&gt;** features!_
->>>		10. await BBG.articleGroup() 
->>>			- _Is a group of related features (**&lt;article&gt;**, **&lt;article-header&gt;**,**&lt;article-main&gt;** and **&lt;article-footer&gt;**)_
+>>	- **Block elements:** 
+>>		01. await BBE.h1BlockSingle() 
+>>		02. await BBE.h2BlockSingle() 
+>>		03. await BBE.h3BlockSingle() 
+>>		04. await BBE.h4BlockSingle() 
+>>		05. await BBE.h5BlockSingle() 
+>>		06. await BBE.h6BlockSingle() 
+>>		07. await BBE.hrBlock()
+>>		08. await BBE.paragraphBlock()
+>>		09. await BBG.headingsGroup()
+>>			- _Is a scrollable group of **&lt;h*&gt;** features!_
+>>		10. await BBG.articleGroup() 
+>>			- _Is a group of related features (**&lt;article&gt;**, **&lt;article-header&gt;**,**&lt;article-main&gt;** and **&lt;article-footer&gt;**)_
 
->>>	- **Inline elements:** 
->>>		01. await BBE.boldBlock();
->>>		02. await BBE.emBlock()
->>>		03. await BBE.markBlock()
->>>		04. await BBE.strongBlock()
->>>		05. await BBE.underlineBlock()
+>>	- **Inline elements:** 
+>>		01. await BBE.boldBlock();
+>>		02. await BBE.emBlock()
+>>		03. await BBE.markBlock()
+>>		04. await BBE.strongBlock()
+>>		05. await BBE.underlineBlock()
 
->>>	- **Text Selectors:**
->>>		01. await BBE.boldSelectBlock()
->>>		02. await BBE.emSelectBlock()
->>>		03. await BBE.markSelectBlock()
->>>		04. await BBE.strongSelectBlock()
->>>		05. await BBE.underlineSelectBlock()
+>>	- **Text Selectors:**
+>>		01. await BBE.boldSelectBlock()
+>>		02. await BBE.emSelectBlock()
+>>		03. await BBE.markSelectBlock()
+>>		04. await BBE.strongSelectBlock()
+>>		05. await BBE.underlineSelectBlock()
 
->>>	- **Text Area:**
->>>		- All content is written to a text-area field and this is optional.
->>>		- _To write it to a hidden field is on the todo list._ 
+>>	- **Text Area:**
+>>		- All content is written to a text-area field and this is optional.
+>>		- _To write it to a hidden field is on the todo list._ 
 
->	>	#### What is provided?
->>>	- moduleEditor();  
->>>	- getIdHelper('id');  
->>>	- createObjects('obj',{});  
->>>	-  Some webcomponents. 
->>>	-  A selection of unicodes wrapped in a *::before or ::after* pseudo element.
->>>	- ...?  
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; What is provided?
+>>	- moduleEditor();  
+>>	- getIdHelper('id');  
+>>	- createObjects('obj',{});  
+>>	-  Some webcomponents. 
+>>	-  A selection of unicodes wrapped in a *::before or ::after* pseudo element.
+>>	- ...?  
 
->	>	#### Where to place what? 
->>>	-  In **index.html/ -.php or ? this!** 
->>>		- &lt;link href='path/to/moduleEditor/styles/editor_index.css' rel='stylesheet' /&gt;
->>>	- On top of **index-/main-/?-.js this**:  
->>>		- import {moduleEditorWebComps} from './../moduleEditor/scripts/module_editor_web_comps.js'; 
->>>		-  await moduleEditorWebComps(), this you do in an _IIFE_.  
->>>	- On **top of the file where you want to invoke a moduleEditor:**  
->>>		- import {moduleEditor} from './path/to/moduleEditor/scripts/module_editor.js';  
->>>		-  import * as LEE from './path/to/moduleEditor/scripts/editor_layout/layout_elems_export.js'; 
->>>		- import * as BBE from './path/to/moduleEditor/scripts/editor_layout/buttons/btn_blocks_export.js';  
->>>		- import * as BBG from './path/to/moduleEditor/scripts/editor_layout/buttons/btns_groups_export.js'; 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where to place what? 
+>>	-  In **index.html/ -.php or ? this!** 
+>>		- &lt;link href='path/to/moduleEditor/styles/editor_index.css' rel='stylesheet' /&gt;
+>>	- On top of **index-/main-/?-.js this**:  
+>>		- import {moduleEditorWebComps} from './../moduleEditor/scripts/module_editor_web_comps.js'; 
+>>		-  await moduleEditorWebComps(), this you do in an _IIFE_.  
+>>	- On **top of the file where you want to invoke a moduleEditor:**  
+>>		- import {moduleEditor} from './path/to/moduleEditor/scripts/module_editor.js';  
+>>		-  import * as LEE from './path/to/moduleEditor/scripts/editor_layout/layout_elems_export.js'; 
+>>		- import * as BBE from './path/to/moduleEditor/scripts/editor_layout/buttons/btn_blocks_export.js';  
+>>		- import * as BBG from './path/to/moduleEditor/scripts/editor_layout/buttons/btns_groups_export.js'; 
 
->	>	#### Obtaining a copy: 
->>>	“First this: there isn't NPM or import map involved here!\
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Obtaining a copy: 
+>>	“First this: there isn't NPM or import map involved here!\
      &nbsp;&nbsp;Also, it isn't plug and pray and that means there is some work todo!\
 	 &nbsp;&nbsp;You need to be familiar with javascript too!„_  
->>>	- On Github just use clone and save it somewhere within your project.  
->>>	- Do this for the additional functions too!	
+>>	- On Github just use clone and save it somewhere within your project.  
+>>	- Do this for the additional functions too!	
 
->	>	#### How to:
->>>	- **Step One:**  
->>>		1. Create a new _*.js_ file or using a _js_ file you already have. 
->>>			-  For the ease I'm going to use an _async IFFE_ here but better create a function for it and call it after your form has been loaded.
->>>		2. Create some __consts__ within: 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How to:
+>>	- **Step One:**  
+>>		1. Create a new _*.js_ file or using a _js_ file you already have. 
+>>			-  For the ease I'm going to use an _async IFFE_ here but better create a function for it and call it after your form has been loaded.
+>>		2. Create some __consts__ within: 
 ``` 
 			//begin with the imports as previously stated!
 			(async()=>{
@@ -143,8 +142,8 @@
 			    const editor_layout_1 = await FT.createObjects('edt_objects',{});
 			})();
 ```  
->>>	- **Step Two:**
->>>		1. Create the objects and pass them to the **moduleEditor!** 
+>>	- **Step Two:**
+>>		1. Create the objects and pass them to the **moduleEditor!** 
 ```  
                         const editor_layout_1 = await FT.createObjects('edt_objects',{
                           base_settings:{
@@ -352,12 +351,12 @@
                   });
                   await moduleEditor(editor_layout_1);
 ```
->	>	#### Testing:
->>>	- I have successfully tested it on devices that I have (**Chrome** _'w11,android'_, **Firefox** _'w11,android'_) but yes it is limited. 
->>>	- Anyhow, as I have followed the webstandards, I am confident it will work good on most browsers/platforms 
->>>	- There is just one browser I'm not sure of and that is 'Safari', because that is not following the webstandards.  
->>> - _“I am sorry for that but there isn't much I can do about it, in fact this is for that browsermaker and not for me!„_  
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Testing:
+>>	- I have successfully tested it on devices that I have (**Chrome** _'w11,android'_, **Firefox** _'w11,android'_) but yes it is limited. 
+>>	- Anyhow, as I have followed the webstandards, I am confident it will work good on most browsers/platforms 
+>>	- There is just one browser I'm not sure of and that is 'Safari', because that is not following the webstandards.  
+>> - _“I am sorry for that but there isn't much I can do about it, in fact this is for that browsermaker and not for me!„_  
 
->	>	 #### How to use?
->>>	- Very simple, just activate a feature and place your mouse in the contenteditable field and start typing!
->>>	- For the selectors, select the text you want to alter and choose one of the selectors!
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; How to use?
+>>	- Very simple, just activate a feature and place your mouse in the contenteditable field and start typing!
+>>	- For the selectors, select the text you want to alter and choose one of the selectors!
