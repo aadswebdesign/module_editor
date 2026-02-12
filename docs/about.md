@@ -7,6 +7,15 @@
 	- [History:](#history)
 	- [This Attempt:](#this-attempt)
 	- [This Editor:](#this-editor)
+- [Notes:](./notes.md)  
+- [Documentation:](./documentation.md)  
+	- [Editor Features:](./documentation.md/#editor-features)
+	- [What Is Provided:](./documentation.md/#what-is-provided)
+	- [Where To Place:](./documentation.md/#where to place)
+	- [Getting A Copy:](./documentation.md/#getting-a-copy)
+	- [Setup An Editor:](./documentation.md/#setup-an-editor)
+	- [Testing:](./documentation.md/#testing)
+
 
 ### About:
 
@@ -49,7 +58,7 @@
 02. After the first insert, first-/last- Element-/Child allways have the same value!
 03. If this is settled, it is allways \*last Element-/Child to be focussed on because any new content will be appended to \* and will become the new \* for the next appending!\
 &nbsp;&nbsp; ☛ So last Element-/Child is the range here and will updated every time content is added!
-&nbsp;&nbsp;&nbsp;<blockquote>"<em>This is exactly why the Range Api makes no sence here because last Element-/Child is allways the startpoint for the next element/node and that can be reached/manipulated with append/appendChild replaceWith and other dom methods!</em>"</blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<blockquote>"<em>This is exactly why the Range Api makes no sence here because last Element-/Child is allways the startpoint for the next element/node and that can be reached/manipulated with append/appendChild replaceWith and other dom methods!</em>"</blockquote>
 
 &nbsp;&nbsp;&nbsp;&nbsp;**So to create an editor:**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ☛ Is all about sticking to the natural flow of those elements!\
@@ -63,20 +72,3 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ☛ Customizable: creating your own look, icons etc.\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ☛ Also, as it's OOP, you can use multiple instances in a single form.\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ☛  <q>Note: the webcomponents and some css classes that I use here are mandatory as my built rely on it!</q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
