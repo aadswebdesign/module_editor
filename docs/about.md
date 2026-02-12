@@ -1,7 +1,7 @@
 ## Module Editor ins and outs!  
 
 #### index / About:
-- Back to [README](../README.md)
+- Back to [README](../Readme.md)
 - [About:](#about)
 	- [Introduction:](#introduction)
 	- [History:](#history)
