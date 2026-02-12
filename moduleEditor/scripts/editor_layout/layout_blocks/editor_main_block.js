@@ -4,7 +4,7 @@ import * as LBE from "./layout_blocks_export.js";
 class EditorMainBlock{
 	#created_elem;
 	#edt_canvas;
-	#elem_data = {};
+	#elem_data;
 	#hidden_ctn;
 	#new_parent;
 	#pre_ctn;
@@ -12,6 +12,7 @@ class EditorMainBlock{
 	constructor(obj_args){
 		const{edt_block_cb,edt_block_id,edt_block_classes,editor_canvas,pre_ctn,hidden_ctn,present_parent} = obj_args;
 		(async()=> {
+			this.#elem_data = await MFT.createObjects('edt_main_block_obj',{});
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
 				this.#elem_data.elem_id = edt_block_id;

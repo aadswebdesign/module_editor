@@ -2,12 +2,13 @@
 import * as MFT from './../../factory/module_functions.js';
 class PreHeadingBlock{
 	#created_elem;
-	#elem_data = {};
+	#elem_data;
 	#new_parent;
 	#present_parent;
 	constructor(obj_args){
 		const {pre_heading_cb,pre_heading_id,pre_heading_classes,pre_heading_content,present_parent} = obj_args;
 		(async()=> {
+			this.#elem_data = await MFT.createObjects('pre_heading_obj',{});
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
 				this.#elem_data.elem_id = pre_heading_id;

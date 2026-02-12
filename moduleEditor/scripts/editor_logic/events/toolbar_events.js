@@ -20,13 +20,16 @@ class ToolbarEvents{
 					if(edt_tb.children.length > 0){
 						const items_wrappers = MFT.uniqueArray(edt_tb.children);
 						for(const item_wrapper of items_wrappers){
-							const items_ctn = item_wrapper.lastElementChild;
+							const items_ctn = item_wrapper.lastElementChild ?? null;
 							const events_manipulator = async (event)=>{
 								event.preventDefault;
-								if(items_ctn.offsetWidth === 160){
-									await MFT.addClass(items_ctn,'max-width');
-								}else{
-									await MFT.removeClass(items_ctn,'max-width');
+								if(items_ctn !== null){
+									if(items_ctn.offsetWidth === 160){
+										await MFT.addClass(items_ctn,'max-width');
+									}else{
+										await MFT.removeClass(items_ctn,'max-width');
+									}
+									
 								}
 							};
 							await MC.clickEventHandler(item_wrapper,await events_manipulator);

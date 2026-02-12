@@ -7,8 +7,9 @@ class HiddenCtnBlock{
 	#new_parent;
 	#present_parent;
 	#textarea_elem;
+	#hidden_input_elem;
 	constructor(obj_args){
-		const {hidden_ctn_cb,hidden_ctn_id,hidden_ctn_classes,	textarea_elem,present_parent} = obj_args;
+		const {hidden_ctn_cb,hidden_ctn_id,hidden_ctn_classes,	textarea_elem,hidden_input_elem,present_parent} = obj_args;
 		(async()=> {
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
@@ -24,7 +25,15 @@ class HiddenCtnBlock{
 					this.#textarea_elem.present_parent = this.#new_parent;
 					await LBE.textareaBlock(this.#textarea_elem);
 				}			
-			})();	
+			})();//this.#hidden_input_elem	
+		}).then(()=>{
+			(async()=> {
+				this.#hidden_input_elem = hidden_input_elem ?? null;
+				if(this.#hidden_input_elem !== null){
+					this.#hidden_input_elem.present_parent = this.#new_parent;
+					await LBE.inputHiddenBlock(this.#hidden_input_elem);
+				}
+			})();
 		});
 	}
 }

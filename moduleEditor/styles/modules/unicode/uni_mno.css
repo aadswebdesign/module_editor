@@ -1,9 +1,29 @@
 /**ADMIN modules/unicode/uni_mno.css todo*/
 /** M */
+.melting-face-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1FAE0";
+	font-size: 1.2em;
+}
+
+.min-heavy-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"➖";
+	font-size: 1.2em;
+}
+
 .multiplication-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"×";
+	font-size: 1.2em;
+}
+.multiplication-heavy-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✖";
 	font-size: 1.2em;
 }
 /** N */

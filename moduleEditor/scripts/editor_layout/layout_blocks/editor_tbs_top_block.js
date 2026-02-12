@@ -10,12 +10,13 @@ class EditorTbsTopBlock{
 	#edt_tb_4;
 	#edt_tb_5;
 	#edt_tb_6;
-	#elem_data = {};
+	#elem_data;
 	#items_wrapper;
 	#new_parent;
 	#present_parent;
 	constructor(obj_args){
 		const {edt_toolbar_1,edt_toolbar_2,edt_toolbar_3,edt_toolbar_4,edt_toolbar_5,edt_toolbar_6,present_parent} = obj_args;
+		this.#elem_data = MFT.createObjectsNA('insert_tbs_top_block_obj',{});
 		this.#edt_tb_1 = edt_toolbar_1 ?? null;
 		this.#edt_tb_2 = edt_toolbar_2 ?? null;
 		this.#edt_tb_3 = edt_toolbar_3 ?? null;

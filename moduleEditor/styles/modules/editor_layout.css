@@ -19,9 +19,6 @@ editor-ctn[class] toolbars-ctn[class]{
 	gap: 0.2em 0.25em;
 	margin-bottom: 0.25em;
 }
-editor-ctn[class] toolbars-ctn.top{
-	margin-bottom: 3.5em;
-}
 
 toolbars-ctn[class] editor-toolbar[class]{
 	padding: 0 0.05em;
@@ -162,12 +159,13 @@ editor-block[class] editor-canvas{
 	overflow-Y: auto;
 }
 
-editor-block[class] pre-ctn[class]{
-	flex-flow: column nowrap;
+editor-ctn[class] editor-block[class] pre-ctn[class]{
+	flex-flow: column wrap;
 }
 
 pre-ctn[class] pre{
 	width: 100%;
+	white-space: wrap;
 	padding: 0.05em;
 	height: 125px;
 	background: #e8e5e5;
@@ -178,3 +176,10 @@ editor-block[class] hidden-ctn[class]{
 	visibility: hidden;
 }
 /** hidden-ctn[class] textarea{} */
+
+
+
+
+
+
+

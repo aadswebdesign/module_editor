@@ -1,5 +1,38 @@
 /**ADMIN modules/unicode/uni_ghi.css todo*/
 /** G */
+.grinning-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F600";
+	font-size: 1.2em;
+}
+.grinning-big-eyes-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F603";
+	font-size: 1.2em;
+}
+.grinning-smile-eyes-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F604";
+	font-size: 1.2em;
+}
+
+.grinning-squinting-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F605";
+	font-size: 1.2em;
+}
+
+.grinning-sweat-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F606";
+	font-size: 1.2em;
+}
+
 /** H */
 .hand-raised-uc::before{
 	position: absolute;

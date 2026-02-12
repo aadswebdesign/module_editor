@@ -3,7 +3,7 @@ import * as MFT from './../../factory/module_functions.js';
 import * as LBE from "./layout_blocks_export.js"; 
 class ItemsWrapperBlock{
 	#created_elem;
-	#elem_data = {};
+	#elem_data;
 	#item_btn;
 	#main_items_ctn;
 	#new_parent;
@@ -11,6 +11,7 @@ class ItemsWrapperBlock{
 	constructor(obj_args){
 		const{items_wrapper_cb,items_wrapper_id,items_wrapper_classes,item_btn,item_ctn,main_items_ctn,present_parent} = obj_args;
 		(async()=> {
+			this.#elem_data = await MFT.createObjects('items_wrapper_obj',{});
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
 				this.#elem_data.elem_id = items_wrapper_id;
@@ -18,7 +19,6 @@ class ItemsWrapperBlock{
 				this.#created_elem = items_wrapper_cb(this.#elem_data);
 				this.#new_parent = MFT.appendToParent(this.#present_parent,this.#created_elem);
 			}
-
 		})().then(()=>{
 			(async()=> {
 				this.#item_btn = item_btn ?? null;
@@ -34,9 +34,6 @@ class ItemsWrapperBlock{
 					this.#main_items_ctn.present_parent = this.#new_parent;
 					await LBE.mainItemsCtnBlock(this.#main_items_ctn);
 				}
-				
-				
-				
 			})();		
 		});
 		//console.table({'ItemsWrapperBlock': obj_args.item_btn});

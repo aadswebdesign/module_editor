@@ -166,6 +166,13 @@
 	font-size: 1.2em;
 }
 
+.cookie-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F36A";
+	font-size: 1.2em;
+}
+
 .copyright-uc::after{
 	position: absolute;
 	inset: 0;
@@ -179,6 +186,13 @@
 	content:"❌";
 	font-size: 1.2em;
 }
+.cross-mark-uc::after{
+	position: absolute;
+	inset: 0;
+	content:"❌";
+	font-size: 1.2em;
+}
+
 .cross-mark-green-bg-uc::before{
 	position: absolute;
 	inset: 0;

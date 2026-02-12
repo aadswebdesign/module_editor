@@ -462,29 +462,29 @@ export function writeSourceCode (...args) {
 }
 
 export function writeToTextArea(...args){
-	const [textarea_elem,editor_elem,write_to_textarea = false,writing_raw_one = false ] = args;
+	const [textarea_elem,editor_elem,write_to_textarea = false,writing_raw = false ] = args;
 	if(write_to_textarea === true){
-		const escaped_html = escapeHtml(editor_elem.innerHTML);
-		if(writing_raw_one === true){
-			textarea_elem.innerText = editor_elem.textContent;
+		const escaped_inner = escapeHtml(editor_elem.innerHTML);
+		const escaped_outer = escapeHtml(editor_elem.outerHTML);
+		if(writing_raw === true){
+			textarea_elem.innerText = escaped_outer;
 		}else{
-			textarea_elem.innerHTML = escaped_html;
+			textarea_elem.innerHTML = escaped_inner;
 		}
 	}
 }
 
 //todo writeToHiddenInput;
+//todo writeToHiddenInput;
 export function writeToHiddenInput(...args){
-	const [hidden_elem,editor_elem,write_to_hidden = false,writing_raw_two = false ] = args;
+	const [hidden_elem,editor_elem,write_to_hidden = false,writing_raw = false ] = args;
 	if(write_to_hidden === true){
-		const escaped_html = escapeHtml(editor_elem.innerHTML);
-		editor_elem.addEventListener('keyup', (evt)=>{
-			evt.preventDefault();
-			if(writing_raw_two === true){
-				hidden_elem.value = editor_elem.textContent;
-			}else{
-				hidden_elem.value = escaped_html;
-			}
-		});
+		const escaped_inner = escapeHtml(editor_elem.innerHTML);
+		const escaped_outer = escapeHtml(editor_elem.outerHTML);
+		if(writing_raw === true){
+			hidden_elem.value = escaped_outer;
+		}else{
+			hidden_elem.value = escaped_inner;
+		}
 	}
 }

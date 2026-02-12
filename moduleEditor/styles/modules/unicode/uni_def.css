@@ -13,6 +13,12 @@
 	content:"÷";
 	font-size: 1.2em;
 }
+.division-heavy::before{
+	position: absolute;
+	inset: 0;
+	content:"➗";
+	font-size: 1.2em;
+}
 /** E */
 .euro::before{
 	position: absolute;
@@ -28,3 +34,9 @@
 	font-size: 1.2em;
 }
 /** F */
+.face-tears-of-joy-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F602";
+	font-size: 1.2em;
+}

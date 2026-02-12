@@ -3,7 +3,7 @@ import * as MFT from './../../factory/module_functions.js';
 import * as LBE from "./layout_blocks_export.js"; 
 class MainItemsCtnBlock{
 	#created_elem;
-	#elem_data = {};
+	#elem_data;
 	#items_inserts;
 	#new_parent;
 	#pre_elem;
@@ -12,6 +12,7 @@ class MainItemsCtnBlock{
 	constructor(obj_args){
 		const {main_items_ctn_cb,main_items_ctn_id,main_items_ctn_classes,main_items_ctn_inserts,present_parent} = obj_args;
 		(async()=> {
+			this.#elem_data = await MFT.createObjects('main_items_ctn_obj',{});
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
 				this.#elem_data.elem_id = main_items_ctn_id;

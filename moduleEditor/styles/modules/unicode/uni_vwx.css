@@ -9,4 +9,12 @@
 	content:"⌚";
 	font-size: 1.2em;
 }
+
+.winking-face-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F609";
+	font-size: 1.2em;
+}
+
 /** X */

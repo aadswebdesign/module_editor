@@ -43,10 +43,31 @@
 	content:"✃";
 	font-size: 1.2em;
 }
-.smiley-uc::before{
-	position: absolute;
+
+.smiley-beaming-eyes-uc::before{
+	position: relative;
 	inset: 0;
-	content:"☺";
+	content:"\1F601";
+	font-size: 1.2em;
+}
+
+.smiley-face-halo-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F607";
+	font-size: 1.2em;
+}
+
+.smiley-face-slightly-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F642";
+	font-size: 1.2em;
+}
+.smiley-face-smiling-eyes-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F60A";
 	font-size: 1.2em;
 }
 
@@ -56,6 +77,13 @@
 	content:"☻";
 	font-size: 1.2em;
 }
+.smiley-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"☺";
+	font-size: 1.2em;
+}
+
 .square-uc::before{
 	position: absolute;
 	inset: 0;
@@ -127,35 +155,25 @@
 	font-size: 1.2em;
 }
 
-.triangle-up-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"⏶";
-	font-size: 1.2em;
-}
-.triangle-right-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"⏵";
-	font-size: 1.2em;
-}
-.triangle-down-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"⏷";
-	font-size: 1.2em;
-}
-.triangle-left-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"⏴";
-	font-size: 1.2em;
-}
-
-/** U */
 .undo-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"⎌";
 	font-size: 1.2em;	
 }
+
+.upside-down-face-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F643";
+	font-size: 1.2em;
+}
+
+/** 
+.::before{
+	position: absolute;
+	inset: 0;
+	content:"\";
+	font-size: 1.2rem;
+}
+*/

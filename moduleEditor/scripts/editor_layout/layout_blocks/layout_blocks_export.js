@@ -5,6 +5,7 @@ export {editorCtnBlock} from './editor_ctn_block.js';
 export {editorTbsBottomBlock} from './editor_tbs_bottom_block.js';
 export {editorTbsTopBlock} from './editor_tbs_top_block.js';
 export {hiddenCtnBlock} from './hidden_ctn_block.js';
+export {inputHiddenBlock} from './input_hidden_block.js';
 export {itemButtonBlock} from './item_button_block.js';
 export {itemsWrapperBlock} from './items_wrapper_block.js';
 export {mainItemsCtnBlock} from './main_items_ctn_block.js';

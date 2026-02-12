@@ -4,12 +4,13 @@ import * as LBE from "./layout_blocks_export.js";
 class ToolbarsBottomBlock{
 	#created_elem;
 	#edt_tbs_btm;
-	#elem_data = {};
+	#elem_data;
 	#present_parent;
 	#new_parent;
 	constructor(obj_args){
 		const {tbs_ctn_btm_cb,tbs_ctn_id,tbs_ctn_classes,	editor_toolbars_bottom,present_parent}= obj_args;
 		(async()=> {
+			this.#elem_data = await MFT.createObjects('tbs_bottom_block_obj',{});
 			this.#present_parent = present_parent ?? null;
 			if(this.#present_parent !== null){
 				this.#elem_data.elem_id = tbs_ctn_id;

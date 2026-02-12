@@ -3,7 +3,7 @@ import * as MFT from './../../factory/module_functions.js';
 import * as LBE from "./layout_blocks_export.js"; 
 class SubItemsCtnBlock{
 	#created_elem;
-	#elem_data = {};
+	#elem_data;
 	#new_parent;
 	#pre_elem;
 	#pre_heading;
@@ -11,6 +11,7 @@ class SubItemsCtnBlock{
 	constructor(obj_args){
 		//const {} = obj_args;
 		(async()=> {
+			//this.#elem_data = await MFT.createObjects('_obj',{});
 		})();
 		console.table({'SubItemsCtnBlock': obj_args});		
 	}
