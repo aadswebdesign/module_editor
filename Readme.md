@@ -10,7 +10,7 @@
 - [Documentation:](./docs/documentation.md)  
 	- [Editor Features:](./docs/documentation.md/#editor-features)
 	- [What Is Provided:](./docs/documentation.md/#what-is-provided)
-	- [Where To Place:](./docs/documentation.md/#where to place)
+	- [Where To Place:](./docs/documentation.md/#where-to-place)
 	- [Getting A Copy:](./docs/documentation.md/#getting-a-copy)
 	- [Setup An Editor:](./docs/documentation.md/#setup-an-editor)
 	- [Testing:](./docs/documentation.md/#testing)
