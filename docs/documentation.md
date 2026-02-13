@@ -86,8 +86,7 @@
   -  import \* as BBG from './../../moduleEditor/scripts/editor_layout/buttons/btns_groups_export.js';
 
 #### Getting A Copy:
-&nbsp;&nbsp;&nbsp;&nbsp;**Note:**\
-&nbsp;&nbsp;&nbsp;&nbsp; ☛ There isn't NPM or import map involved here!\
+&nbsp;&nbsp;&nbsp;&nbsp; ☛ **Note**, there isn't NPM or <u>type='importmap'</u> involved here!\
 &nbsp;&nbsp;&nbsp;&nbsp; ☛ It isn't plug and pray and that means there is some work todo!\
 &nbsp;&nbsp;&nbsp;&nbsp; ☛ You need to be familiar with javascript too!\
 &nbsp;&nbsp;&nbsp;&nbsp; ☛ On Github just use clone and save it somewhere within your project and do this for the additional functions too!
