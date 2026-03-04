@@ -9,6 +9,7 @@ class ToolbarEvents{
 		const [tbs_ctn] = args;
 		(async()=> {
 			this.#tbs_ctn = tbs_ctn ?? null;
+			//console.log('this.#tbs_ctn: ', this.#tbs_ctn);
 		})();
 		(async()=> {
 			if(this.#tbs_ctn.children.length > 0){
@@ -20,16 +21,13 @@ class ToolbarEvents{
 					if(edt_tb.children.length > 0){
 						const items_wrappers = MFT.uniqueArray(edt_tb.children);
 						for(const item_wrapper of items_wrappers){
-							const items_ctn = item_wrapper.lastElementChild ?? null;
+							const items_ctn = item_wrapper.lastElementChild;
 							const events_manipulator = async (event)=>{
 								event.preventDefault;
-								if(items_ctn !== null){
-									if(items_ctn.offsetWidth === 160){
-										await MFT.addClass(items_ctn,'max-width');
-									}else{
-										await MFT.removeClass(items_ctn,'max-width');
-									}
-									
+								if(items_ctn.offsetWidth === 160){
+									await MFT.addClass(items_ctn,'max-width');
+								}else{
+									await MFT.removeClass(items_ctn,'max-width');
 								}
 							};
 							await MC.clickEventHandler(item_wrapper,await events_manipulator);

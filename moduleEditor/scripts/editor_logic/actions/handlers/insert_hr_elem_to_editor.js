@@ -26,6 +26,8 @@ class InsertHrElemToEditor{
 				}
 			}
 		})();
+		console.table({'InsertHrElemToEditor': args});
+
 	}
 }
 export const insertHrElemToEditor = async (...args)=>{

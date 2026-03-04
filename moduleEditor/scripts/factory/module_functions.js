@@ -188,6 +188,7 @@ export const getNodeAncestor = async (...args)=>{
 	return ancestor;	
 }
 
+//deprecated
 export async function getClassHelper(...args){
 	const [class_name,class_parent=null] = args;
 	if(class_parent !== null){
@@ -195,37 +196,21 @@ export async function getClassHelper(...args){
 	}
 	return await document.getElementsByClassName(class_name);
 }
+export async function getClasses(...args){
+	const [class_name,class_parent=null] = args;
+	if(class_parent !== null){
+		const parent_classes = await class_parent.getElementsByClassName(class_name);
+		return uniqueArray(parent_classes);
+	}
+	const doc_classes = await document.getElementsByClassName(class_name);
+	return uniqueArray(doc_classes); 
+}
 
 export async function getId(id){
     if(id){
 		return await document.getElementById(id);
 	}
 }
-
-export const getRange = () => {
-	const selection = document.getSelection();
-	if (selection.rangeCount === 0) return
-	return selection.getRangeAt(0)
-};	
-
-export const getSelection = async (...args)=>{
-	const [clone = false,remove = false,add_range= false, range_val] = args;
-	const selection = document.getSelection();
-	if (selection.rangeCount === 0) return;
-	let _selection = null;
-	if(clone === true){
-		_selection = selection.getRangeAt(0).cloneRange();
-	}else{
-		_selection = selection.getRangeAt(0);
-	}
-	if(remove === true){
-		_selection = selection.removeAllRanges();
-	}
-	if(add_range === true){
-		_selection = selection.addRange(range_val);
-	}
-	return _selection;
-};
 
 export const getTagNames = async (...args) => {
 	const [tag, parent_el = null,log = false] = args
@@ -238,7 +223,7 @@ export const getTagNames = async (...args) => {
 	if(log === true){
 		console.log(`getTagNames(${tag})`,el);
 	}
-	return el;
+	return el;//todo wrap in uniqueArray()
 }
 
 export const getTagNamesNA = async (...args) => {
@@ -252,11 +237,24 @@ export const getTagNamesNA = async (...args) => {
 	if(log === true){
 		console.log(`getTagNames(${tag})`,el);
 	}
-	return el;
+	return el;//todo wrap in uniqueArray()
 }
 
-export const getAllTagNames = async (parent = null) =>{
-	return await getTagNames('*',parent);
+/**
+ * Get the number of characters in an element
+ *
+ * @param {node} element
+ * @return {number}
+ */
+export function getTextLength(...args) {
+  const[node,log = false] = args;
+  const range = node.ownerDocument.createRange()
+  range.selectNodeContents(node);
+  if(log === true){
+	  console.log('range: ',range);
+	  console.log('range length: ',range.toString().length);
+  }
+  return range.toString().length;
 }
 
 export const insertAdjacent = async (...args)=>{
@@ -359,17 +357,14 @@ export function setCallbackParams(...args){
 	}
 }
 
-/**
- * Get the number of characters in an element
- *
- * @param {Element} element
- * @return {number}
- */
-export function getTextLength(element) {
-  const range = element.ownerDocument.createRange()
-  range.selectNodeContents(element)
-  return range.toString().length;
-}
+export const setUndoIds = async (...args) =>{
+	const [tag_name,parent_el,pre_fix = null] = args;
+	const tags = await getTagNames(tag_name,parent_el);
+	let i = 0;
+	for(const tag of uniqueArray(tags)){
+		tag.dataset.undoId = `${pre_fix}${tag_name.toLowerCase()}_0${++i}`;
+	}
+};
 
 export const setForLoop = (args) =>{
 	const argMap = new Map([['loop_objects',args]]);
@@ -427,22 +422,38 @@ export const setWhileLoop = async (args) =>{
 		}		
 	}
 } 
-
+export const unwrap = node => {
+	while (node.hasChildNodes()) {
+		node.parentNode.insertBefore(node.firstChild, node)
+	}
+	node.remove()
+};
+export const unwrapNodeSelect = async (...args) => {
+	//where options: beforebegin,afterbegin,beforeend,afterend
+	const [node, where = 'beforebegin'] = args; 
+	const new_node = node.innerHTML;
+ 	const selection = window.getSelection();
+    if(selection.rangeCount !== null){ 
+		node.insertAdjacentHTML(where, new_node);
+		node.remove();
+	}else return;
+};
+		
 export const wrapSelection = async (...args)=>{
-	const [elem] = args
+	const [elem,tag_name] = args
 	const selection = document.getSelection();
 	if (selection.rangeCount > 0 && !selection.isCollapsed){
 		const range = selection.getRangeAt(0).cloneRange();
 		if(elem){
 			try{
 				range.surroundContents(elem);
-				console.log('Selection saved!');
+				console.log('Selection Surrounded!');
 			}catch(log){
 				console.log('node is not a text node but when you select again it will use the ancestor text node.');
 			}
 		}
 	}else{
-		console.log('No selection to save!');
+		console.log('Select text that you want to surround first!');
 	}
 }
 

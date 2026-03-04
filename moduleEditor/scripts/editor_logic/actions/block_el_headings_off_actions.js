@@ -13,6 +13,7 @@ class BlockElHeadingsOffActions{
 	#pre_outer;
 	#tag_name;
 	last_child;
+	module_block;
 	constructor(obj_args){
 		const {mdl_name,tag_name,editor_elem,pre_elems} = obj_args;
 		const {pre_elem,pre_output,pre_outer}= pre_elems;

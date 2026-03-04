@@ -24,11 +24,12 @@ class InsertInlineElToParent{
 		(async()=> {
 			this.#parent_tags = await MFT.getTagNames(parent_tags,this.#parent_el);
 			if(this.#parent_tags.length > 0){
+				let tag_name;
 				for(const parent_tag of this.#parent_tags){
 					if(parent_tag.firstChild === null){
 						this.first_child = parent_tag;
 						MDFT.appendFirstNode(this.first_child,this.#created_el);
-						console.log('this.first_child: ', this.first_child);
+						tag_name = this.#created_el.tagName;
 					}
 					if(parent_tag.lastChild !== null){
 						this.tag_parent = parent_tag;
@@ -37,6 +38,7 @@ class InsertInlineElToParent{
 							if(this.tag_parent.hasAttribute('data-block_active') || this.tag_parent.hasAttribute('data-inline_active')){
 								MDFT.appendLastNode(this.tag_parent,this.#created_el);
 							}
+							tag_name = this.#created_el.tagName;
 						}
 					}
 				}

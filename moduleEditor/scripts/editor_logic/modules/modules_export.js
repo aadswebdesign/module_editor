@@ -25,3 +25,4 @@ export {emSelectModule} from './selectors/em_select_mdl.js';
 export {markSelectModule} from './selectors/mark_select_mdl.js';
 export {strongSelectModule} from './selectors/strong_select_mdl.js';
 export {underlineSelectModule} from './selectors/underline_select_mdl.js';
+export {undoSelectModule} from './selectors/undo_select_mdl.js';

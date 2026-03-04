@@ -1,9 +1,7 @@
 //scripts/editor_logic/actions/selects_on_actions.js
 import * as MFT from './../../factory/module_functions.js';
 import * as MDFT from './../../factory/module_dom_functions.js';
-/**
- * class for selecting texts and wrapping them with an  element
- */
+import * as HE from './handlers_exports.js';
 class SelectsOnActions{
 	#create_elem;
 	#created_elem;
@@ -14,7 +12,7 @@ class SelectsOnActions{
 	#pre_outer;
 	module_block;
 	constructor(obj_args){
-		const {create_elem,mdl_name,pre_elems} = obj_args;
+		const {editor_elem,create_elem,mdl_name,pre_elems,tag_name} = obj_args;
 		const {pre_elem,pre_output,pre_outer}= pre_elems;
 		this.#create_elem = create_elem;
 		this.#created_elem = MDFT.createEditorElem;
@@ -26,27 +24,32 @@ class SelectsOnActions{
 		(async()=>{
 			switch(this.#mdl_name){
 				case 'bold_select_mdl':{
-					await this.module_block();
+					await this.module_block(tag_name);
 					//console.log('on: ',this.#mdl_name);
 				}	
 				break;//on				
 				case 'em_select_mdl':{
-					await this.module_block();
+					await this.module_block(tag_name);
 					//console.log('on: ',this.#mdl_name);
 				}	
 				break;//on				
 				case 'mark_select_mdl':{
-					await this.module_block();
+					await this.module_block(tag_name);
 					//console.log('on: ',this.#mdl_name);
 				}	
 				break;//on				
 				case 'strong_select_mdl':{
-					await this.module_block();
+					await this.module_block(tag_name);
 					//console.log('on: ',this.#mdl_name);
 				}	
 				break;//on				
 				case 'underline_select_mdl':{
-					await this.module_block();
+					await this.module_block(tag_name);
+					//console.log('on: ',this.#mdl_name);
+				}	
+				break;//oh				
+				case 'undo_select_mdl':{
+					await HE.undoSelectedElem(editor_elem);
 					//console.log('on: ',this.#mdl_name);
 				}	
 				break;//oh				
@@ -56,10 +59,12 @@ class SelectsOnActions{
 		})();
 		//console.table({'SelectsOnActions': obj_args});
 	}
-	module_block = async ()=>{
-		const elem_wrapper = await this.#created_elem(this.#create_elem,['inline','wrapped'],null);
-		await MFT.wrapSelection(elem_wrapper);
+	module_block = async (...args)=>{
+		const [tag_name] = args;
+		const elem_wrapper = await this.#created_elem(this.#create_elem,['inliner','wrapped'],null);
+		await MFT.wrapSelection(elem_wrapper,tag_name);
 	};
+	
 }
 export const selectsOnActions = async (obj_args)=>{
 	return new SelectsOnActions(obj_args);//

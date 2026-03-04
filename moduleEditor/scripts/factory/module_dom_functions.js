@@ -98,7 +98,7 @@ export const createEditorElemNA = (...args)=>{
 	return elem_create;
 };
 
-export const isNotParentElement = (...args)=>{
+export const isParentElement = (...args)=>{
 	const [parent_el, tag_name,replace_el,log = false] = args;
 	(async ()=>{
 		if(parent_el !== null){
@@ -106,13 +106,17 @@ export const isNotParentElement = (...args)=>{
 				if(parent_el.lastElementChild !== null){
 					const last_child = parent_el.lastElementChild;
 					last_child.replaceWith(replace_el);
+					if(log === true){
+						console.log(`isNotParentElement(${tag_name}): `,last_child);
+						console.log('parent_el',parent_el);
+					}
 				}
 			}
 		}
 	})();
 };
 
-export const isNotPreviousElem = (...args)=>{
+export const isPreviousElem = (...args)=>{
 	const [parent_el, tag_name,replace_el,log = false] = args;
 	let last_child;
 	(async ()=>{
@@ -127,6 +131,7 @@ export const isNotPreviousElem = (...args)=>{
 				last_child = null;
 				if(log === true){
 					console.log(`isPreviousElem(${tag_name}): `,last_child);
+					console.log('parent_el',parent_el);
 				}
 			}
 		}
@@ -174,10 +179,10 @@ export const removeLastBr = (...args)=>{
 }
 
 export const replaceAncestorWith = (...args)=>{
-	const [ancestor_el,create_el,tag_elem,log = false] = args;
+	const [parent_el,create_el,tag_elem,log = false] = args;
 	let old_child;
-	if(ancestor_el !== null && ancestor_el.tagName === tag_elem){
-		old_child = ancestor_el;
+	if(parent_el !== null && parent_el.tagName === tag_elem){
+		old_child = parent_el;
 		old_child.replaceWith(create_el);
 		if(log === true){
 			console.log(`replaceAncestorWith: `,old_child);

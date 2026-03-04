@@ -97,7 +97,7 @@ items-wrapper.block-group.articles-headings items-button{
 	border: 0.05em solid #8bb1d8;
 	border-radius: 0.25em;
 }
-
+/* todo, adjust after icon is replaced for unicode**/
 items-wrapper.block-group.articles-headings items-button.pseudo::before{
 	top: -0.2em;
 	height: calc(100% - 0.2em);

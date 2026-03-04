@@ -25,12 +25,13 @@ class BlockElOnActions{
 		this.#pre_outer = pre_outer;
 		this.#tag_name = tag_name;
 		const no_prev = ['H1','H2','H3','H4','H5','H6','P'];
-		const no_prev1 = ['ARTICLE-HEADER',...no_prev];
-		const no_prev2 = ['ARTICLE-MAIN',...no_prev];
-		const no_prev3 = ['ARTICLE-FOOTER',...no_prev];
+		const no_prev1 = ['ARTICLE-HEADER'];
+		const no_prev2 = ['ARTICLE-MAIN'];
+		const no_prev3 = ['ARTICLE-FOOTER'];
 		const no_prev4 = ['ARTICLE-HEADER','ARTICLE-MAIN','ARTICLE-FOOTER',...no_prev];
-		const no_parent1 = ['ARTICLE-HEADER','ARTICLE-MAIN','ARTICLE-FOOTER','H1','H2','H3','H4','H5','H6','P'];
-		const no_parent2 = ['H1','H2','H3','H4','H5','H6','P'];
+		const no_prt1 = ['ARTICLE-HEADER','ARTICLE-MAIN','ARTICLE-FOOTER','H1','H2','H3','H4','H5','H6','P'];
+		const no_prt2 = ['H1','H2','H3','H4','H5','H6','P'];
+		const no_prt_h1 = ['ARTICLE-MAIN','ARTICLE-FOOTER',...no_prt2];
 		(async()=> {
 			switch(this.#mdl_name){
 				case 'article_mdl':{
@@ -39,72 +40,92 @@ class BlockElOnActions{
 				}
 				break;//on
 				case 'art_header_mdl':{
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev1,no_parent1);
+					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev1,no_prt1);
 					//console.log('on: ',this.#mdl_name);
 				}
 				break;//on
 				case 'art_main_mdl':{
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev2,no_parent1);
+					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev2,no_prt1);
 					//console.log('on: ',this.#mdl_name);
 				}
 				break;//on
 				case 'art_footer_mdl':{
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev3,no_parent1);
+					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt1);
 					//console.log('on: ',this.#mdl_name);
 				}
-				break;//on insertBlockChildToEditor
+				break;//on testen
 				case 'h1_mdl_single':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev4,no_parent1);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
+					if(this.#editor_elem.firstElementChild === null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt_h1);
+					}
+					if(this.#editor_elem.firstElementChild !== null){
+						this.first_child = this.#editor_elem.firstElementChild;
+						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt_h1);
+					}					
 					//console.log('on: ',this.#mdl_name);
 				}
-				break;//on
+				break;//on testen
 				case 'h2_mdl_single':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev4,no_parent1);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
+					if(this.#editor_elem.firstElementChild === null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}
+					if(this.#editor_elem.firstElementChild !== null){
+						this.first_child = this.#editor_elem.firstElementChild;
+						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}					
 					//console.log('on: ',this.#mdl_name);
 				}
-				break;//on
+				break;//on testen
 				case 'h3_mdl_single':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev4,no_parent1);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
+					if(this.#editor_elem.firstElementChild === null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}
+					if(this.#editor_elem.firstElementChild !== null){
+						this.first_child = this.#editor_elem.firstElementChild;
+						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}					
 					//console.log('on: ',this.#mdl_name);
 				}
-				break;//on
+				break;//on testen
 				case 'h4_mdl_single':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev4,no_parent1);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
+					if(this.#editor_elem.firstElementChild === null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}
+					if(this.#editor_elem.firstElementChild !== null){
+						this.first_child = this.#editor_elem.firstElementChild;
+						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}					
 					//console.log('on: ',this.#mdl_name);
 				}
-				break;//on
+				break;//on testen
 				case 'h5_mdl_single':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev4,no_parent1);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
+					if(this.#editor_elem.firstElementChild === null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}
+					if(this.#editor_elem.firstElementChild !== null){
+						this.first_child = this.#editor_elem.firstElementChild;
+						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}					
 					//console.log('on: ',this.#mdl_name);
 				}
-				break;//on
+				break;//on testen
 				case 'h6_mdl_single':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',no_prev4,no_parent1);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',no_prev3,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',no_prev3,no_parent2);
+					if(this.#editor_elem.firstElementChild === null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}
+					if(this.#editor_elem.firstElementChild !== null){
+						this.first_child = this.#editor_elem.firstElementChild;
+						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}					
 					//console.log('on: ',this.#mdl_name);
 				}
-				break;//on
+				break;//on todo
 				case 'hr_mdl':{
 					await HE.insertHrElemToEditor(this.#editor_elem,this.#create_elem,['do-nothing']);
 					await HE.insertHrElemToParent(this.#editor_elem,this.#create_elem,['do-nothing']);
@@ -113,11 +134,14 @@ class BlockElOnActions{
 				break;//on
 				case 'p_mdl':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE',this.#tag_name,'data-block_active',null,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',null,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',this.#pre_elems,null,no_parent2);
-					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',null,no_parent2);
-					//console.log('on: ',this.#mdl_name);
+					if(this.#editor_elem.firstElementChild === null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
+					}
+					if(this.#editor_elem.firstElementChild !== null){
+						this.first_child = 	this.#editor_elem.firstElementChild;
+						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',null,no_prt2);
+					}
+					
 				}
 				break;//on
 			}

@@ -15,6 +15,7 @@ class EditorLogic{
 		this.#edt_ctn = edt_ctn_parent.lastElementChild ?? null;
 		(async()=> {
 			if(this.#edt_ctn !== null){
+				await MFT.getTagNames('*',this.#edt_ctn);
 				const edt_objects = await MFT.createObjects('edt_obj',{
 					toolbars_ctn: await MFT.getTagNames('TOOLBARS-CTN',this.#edt_ctn),//base_settings
 					base_events:{

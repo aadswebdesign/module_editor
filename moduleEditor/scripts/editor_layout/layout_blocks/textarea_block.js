@@ -2,13 +2,12 @@
 import * as MFT from './../../factory/module_functions.js';
 class TextareaBlock{
 	#created_elem;
-	#elem_data;
+	#elem_data = {};
 	#new_parent;
 	#present_parent;
 	constructor(obj_args){
 		const {textarea_cb,textarea_id,textarea_classes,textarea_name,textarea_rows,textarea_cols,present_parent}= obj_args;
 		(async()=> {
-			this.#elem_data = await MFT.createObjects('text_area_block_obj',{});
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
 				this.#elem_data.elem_id = textarea_id;

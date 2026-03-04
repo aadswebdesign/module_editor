@@ -104,6 +104,8 @@ class ModulesCollect{
 				await ME.strongSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,strong_select_block);
 				if(u_select_block !== undefined)
 				await ME.underlineSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,u_select_block);
+				if(undo_select_block !== undefined)
+				await ME.undoSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,undo_select_block);//todo
 			}
 		})();
 	}

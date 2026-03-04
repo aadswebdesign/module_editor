@@ -19,7 +19,7 @@ class InsertBlockElemToEditor{
 			if(this.#parent_elem.firstElementChild === null){
 				MDFT.appendFirstElem(this.#parent_elem,this.#created_elem);
 				if(log === true){
-					console.log('initial first elem appended');
+					console.log('initial first elem appended1');
 				}
 			}
 			if(this.#parent_elem.lastElementChild !== null){
@@ -27,7 +27,7 @@ class InsertBlockElemToEditor{
 				if(!this.#parent_elem.firstElementChild.hasAttribute('data-block_active')){
 					MDFT.replaceAncestorWith(this.last_child,this.#created_elem,'BR');
 					if(log === true){
-						console.log('initial last elem appended');
+						console.log('initial last elem appended1');
 					}
 				}
 			}

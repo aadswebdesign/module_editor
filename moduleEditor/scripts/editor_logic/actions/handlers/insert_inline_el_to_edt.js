@@ -28,6 +28,7 @@ class InsertInlineElToEdt{
 					MDFT.appendLastNode(this.#parent_el,this.#created_el);
 				}
 			}
+			const tag_name = this.#created_el.tagName;
 			this.#created_el.appendChild(this.#zero_with_no_space_node);
 			MFT.writeSourceCode(pre_elem,this.#parent_el,pre_output,pre_outer);			
 		})();

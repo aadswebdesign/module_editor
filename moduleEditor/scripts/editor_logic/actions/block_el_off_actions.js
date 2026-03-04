@@ -13,6 +13,8 @@ class BlockElOffActions{
 	#pre_outer;
 	#tag_name;
 	last_child;
+	module_block1;
+	module_block2;
 	constructor(obj_args){
 		const {editor_elem,mdl_name,pre_elems,tag_name} = obj_args;
 		const {pre_elem,pre_output,pre_outer}= pre_elems;
@@ -73,12 +75,25 @@ class BlockElOffActions{
 				break;//off
 				case 'h6_mdl_single':{
 					await this.module_block1(this.#tag_name);
+					await this.set_hr_off();
 					console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'p_mdl':{
 					await this.module_block1(this.#tag_name);
-					console.log('off: ',this.#mdl_name);
+					const headings_block = await MFT.getClassHelper('heading block');
+					if(headings_block !== null){
+						for(const heading_block of MFT.uniqueArray(headings_block)){
+							if(heading_block.hasAttribute('data-on')){
+								heading_block.removeAttribute('data-on');
+								const items_ruler = heading_block.parentElement.parentElement.lastElementChild;
+								items_ruler.textContent = '';
+								//this.last_child = this.#editor_elem.lastElementChild;
+								//this.#ancestor = await MFT.getAncestor(this.last_child,this.#editor_elem,tag_name);
+								//console.log('#ancestor: ',this.#ancestor);
+							}
+						}
+					}
 				}
 				break;//off
 			}
