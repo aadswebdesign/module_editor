@@ -46,9 +46,9 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.firstElementChild === null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt_h1);
 					}
-					if(this.#editor_elem.firstElementChild !== null){
-						this.first_child = this.#editor_elem.firstElementChild;
-						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt_h1);	
+					if(this.#editor_elem.lastElementChild !== null){
+						this.last_child = this.#editor_elem;
+						await HE.insertBlockElemToParent(this.last_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt_h1);	
 					}
 						
 				}
@@ -58,9 +58,8 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.firstElementChild === null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
 					}
-					if(this.#editor_elem.firstElementChild !== null){
-						this.first_child = this.#editor_elem.firstElementChild;
-						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);	
+					if(this.#editor_elem.lastElementChild !== null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);	
 					}
 				}
 				break;//on2
@@ -69,9 +68,8 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.firstElementChild === null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
 					}
-					if(this.#editor_elem.firstElementChild !== null){
-						this.first_child = this.#editor_elem.firstElementChild;
-						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
+					if(this.#editor_elem.lastElementChild !== null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
 					}
 				}
 				break;//on3
@@ -80,9 +78,8 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.firstElementChild === null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
 					}
-					if(this.#editor_elem.firstElementChild !== null){
-						this.first_child = this.#editor_elem.firstElementChild;
-						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
+					if(this.#editor_elem.lastElementChild !== null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
 					}
 				}
 				break;//on4
@@ -91,9 +88,8 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.firstElementChild === null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
 					}
-					if(this.#editor_elem.firstElementChild !== null){
-						this.first_child = this.#editor_elem.firstElementChild;
-						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);				
+					if(this.#editor_elem.lastElementChild !== null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);				
 					}
 					//console.log('on: ',this.#mdl_name);
 				}
@@ -103,9 +99,8 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.firstElementChild === null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
 					}
-					if(this.#editor_elem.firstElementChild !== null){
-						this.first_child = this.#editor_elem.firstElementChild;
-						await HE.insertBlockElemToParent(this.first_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
+					if(this.#editor_elem.lastElementChild !== null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
 					}
 					//console.log('on: ',this.#mdl_name);
 				}
